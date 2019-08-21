@@ -1,26 +1,25 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://bg.png" type="Texture" id=2]
-[ext_resource path="res://ilha.tscn" type="PackedScene" id=3]
-[ext_resource path="res://player/run1.png" type="Texture" id=4]
-[ext_resource path="res://player/run2.png" type="Texture" id=5]
-[ext_resource path="res://player/run3.png" type="Texture" id=6]
-[ext_resource path="res://player/run4.png" type="Texture" id=7]
-[ext_resource path="res://overworld-theme-short.ogg" type="AudioStream" id=8]
+[ext_resource path="res://player/run1.png" type="Texture" id=3]
+[ext_resource path="res://player/run2.png" type="Texture" id=4]
+[ext_resource path="res://player/run3.png" type="Texture" id=5]
+[ext_resource path="res://player/run4.png" type="Texture" id=6]
+[ext_resource path="res://overworld-theme-short.ogg" type="AudioStream" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1e+007, 18 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 10.05
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 18 )
 
 [node name="game" type="Node2D"]
@@ -43,9 +42,7 @@ region_rect = Rect2( 0, 0, 999999, 110 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/chao"]
 position = Vector2( 1e+007, 200 )
-shape = SubResource( 2 )
-
-[node name="ilha" parent="level" instance=ExtResource( 3 )]
+shape = SubResource( 1 )
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 36, 149 )
@@ -53,8 +50,8 @@ position = Vector2( 36, 149 )
 [node name="Sprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 0, 13 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 1 )
-frame = 1
+frames = SubResource( 4 )
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -68,8 +65,8 @@ drag_margin_v_enabled = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 0, 13 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="song" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 7 )
 autoplay = true

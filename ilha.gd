@@ -1,3 +1,4 @@
+tool
 extends Area2D
 
 onready var tween = $Tween
@@ -6,10 +7,10 @@ onready var sprite = $Sprite
 enum cores {verde, amarelo, cristal}
 export (cores) var tipo_atual = cores.verde
 enum tamanhos {pequena, grande}
-export (tamanhos) var tamanho_atual = tamanhos.pequena
+export (tamanhos) var tamanho_atual
 
 export (float, 0, 2, 0.1) var DURATION = 0.2
-export (float, 0, 300, 0.1) var POSITION
+export (float, 0, 300, 0.1) var MUS_POSITION
 
 var up_range
 

@@ -1,20 +1,49 @@
 tool
 extends EditorScript
 
+var game
+var level
+
 func _run():
-	var game = get_scene()
-	var level = game.get_node("level")
+	print("running script")
+	game = get_scene()
+	level = game.get_node("level")
+	del_all_islands()
+	gen_ilhas_w_size()
+
+func get_island_sizes():
+	var sizes = Array()
+	for ilha in level.get_children():
+		if "ilha".is_subsequence_of(ilha.name):
+			var info = [ilha.MUS_POSITION, ilha.tamanho_atual]
+			sizes.append(info)
+	print(var2str(sizes))
+
+func del_all_islands():
 	for node in level.get_children():
 		if "ilha".is_subsequence_of(node.name):
 			node.free()
+
+func gen_ilhas_w_size():
+	var sizes = [ [ 17.1, 0 ], [ 20.9, 0 ], [ 21.1, 0 ], [ 21.2, 0 ], [ 23.3, 1 ], [ 24.2, 0 ], [ 25.1, 1 ], [ 25.2, 0 ], [ 25.5, 0 ], [ 26.0, 0 ], [ 29.0, 1 ], [ 29.2, 1 ], [ 32.4, 0 ], [ 32.8, 0 ], [ 33.6, 0 ], [ 34.2, 1 ], [ 34.4, 0 ], [ 35.3, 0 ], [ 35.8, 0 ], [ 36.6, 0 ], [ 36.9, 0 ], [ 37.1, 1 ], [ 37.4, 0 ], [ 38.3, 1 ], [ 38.5, 0 ], [ 38.8, 1 ], [ 39.6, 1 ], [ 39.9, 0 ], [ 40.2, 1 ], [ 40.5, 1 ], [ 41.5, 0 ], [ 42.0, 0 ], [ 44.1, 1 ], [ 44.7, 0 ], [ 45.2, 1 ], [ 45.9, 1 ], [ 46.1, 1 ], [ 46.3, 0 ], [ 46.6, 1 ], [ 47.4, 1 ], [ 47.9, 1 ], [ 48.7, 1 ], [ 48.9, 0 ], [ 49.2, 0 ], [ 49.5, 1 ], [ 50.4, 0 ], [ 51.2, 1 ], [ 52.0, 0 ], [ 53.1, 0 ], [ 53.5, 1 ], [ 55.2, 0 ], [ 55.5, 1 ], [ 55.9, 0 ], [ 57.4, 1 ], [ 57.7, 1 ], [ 58.1, 0 ], [ 59.6, 0 ], [ 59.9, 1 ], [ 60.3, 0 ], [ 61, 0 ], [ 61.3, 1 ], [ 62.4, 0 ] ]
 	var ilha_scene: PackedScene = load("res://ilha.tscn")
-	var ilha_array = [0.02, 0.2, 0.5, 0.7, 0.9, 1.2, 1.8, 2.4, 2.8, 3.3, 3.7, 4, 4.3, 4.5, 4.6, 5, 5.2, 5.4, 5.6, 5.8, 5.9, 6.2, 6.5, 6.7, 6.8, 7.3, 7.8, 8.2, 8.6, 8.9, 9.2, 9.4, 9.7, 9.9, 10.1, 10.3, 10.6, 10.8, 11.1, 11.3, 11.5, 11.6, 12.103401, 12.428481, 12.567801, 12.70712, 13.125079, 13.450159, 13.612699, 13.752018, 14.100317, 14.262857, 14.378957, 14.796916, 14.959455, 15.098776, 15.261315, 15.563174, 15.911474, 16.166893, 16.352654, 17.1, 17.3, 17.5, 17.9, 18.2, 18.4, 18.5, 18.9, 19, 19.1, 19.6, 20, 20.5, 22, 22.1, 22.3, 22.7, 23.1, 23.2, 23.3, 23.7, 23.9, 24, 24.4, 24.5, 25, 25.5, 25.7, 25.9, 26.8, 27, 27.1, 27.5, 27.8, 28, 28.1, 28.5, 28.7, 29.1, 29.6, 30, 31.7, 32.1, 32.2, 32.5, 32.5, 32.5, 32.5]
+	randomize()
+	for info in sizes:
+		var ilha = ilha_scene.instance()
+		ilha.position.x = info[0] * game.SPEED + game.OFFSET
+		ilha.MUS_POSITION = info[0]
+		ilha.tamanho_atual = info[1]
+		level.add_child(ilha)
+		ilha.set_owner(game)
+
+func gen_ilhas():
+	var ilha_scene: PackedScene = load("res://ilha.tscn")
+	var ilha_array = [17.1, 20.9, 21.1, 21.2, 23.3, 24.2, 25.1, 25.2, 25.5, 26.0, 29.0, 29.2, 32.4, 32.8, 33.6, 34.2, 34.4, 35.3, 35.8, 36.6, 36.9, 37.1, 37.4, 38.3, 38.5, 38.8, 39.6, 39.9, 40.2, 40.5, 41.5, 42.0, 44.1, 44.7, 45.2, 45.9, 46.1, 46.3, 46.6, 47.4, 47.9, 48.7, 48.9, 49.2, 49.5, 50.4, 51.2, 52.0, 53.1, 53.5, 55.2, 55.5, 55.9, 57.4, 57.7, 58.1, 59.6, 59.9, 60.3, 61, 61.3, 62.4]
 	randomize()
 	for pos in ilha_array:
 		var ilha = ilha_scene.instance()
 		ilha.position.x = pos * game.SPEED + game.OFFSET
 		ilha.MUS_POSITION = pos
 		ilha.tamanho_atual = randi() % 2
-		print(ilha.tamanho_atual)
 		level.add_child(ilha)
 		ilha.set_owner(game)

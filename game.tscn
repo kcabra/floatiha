@@ -8,12 +8,12 @@
 [ext_resource path="res://player/run2.png" type="Texture" id=6]
 [ext_resource path="res://player/run3.png" type="Texture" id=7]
 [ext_resource path="res://player/run4.png" type="Texture" id=8]
-[ext_resource path="res://overworld-theme-short.ogg" type="AudioStream" id=9]
+[ext_resource path="res://floatiha2.ogg" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1e+007, 18 )
+extents = Vector2( 1e+07, 18 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
@@ -21,7 +21,7 @@ animations = [ {
 "speed": 10.05
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 18 )
 
 [node name="game" type="Node2D"]
@@ -45,720 +45,752 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 999999, 110 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/chao"]
-position = Vector2( 1e+007, 200 )
+position = Vector2( 1e+07, 200 )
 shape = SubResource( 1 )
 
 [node name="ilha" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 116, 130 )
-rotation = -0.140981
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 0.02
-
-[node name="ilha2" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 170, 130 )
-rotation = -0.537221
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 0.2
-
-[node name="ilha3" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 260, 130 )
-rotation = 0.448801
-script = ExtResource( 4 )
-MUS_POSITION = 0.5
-
-[node name="ilha4" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 320, 130 )
-rotation = 0.320862
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 0.7
-
-[node name="ilha5" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 380, 130 )
-rotation = -0.311529
-script = ExtResource( 4 )
-MUS_POSITION = 0.9
-
-[node name="ilha6" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 470, 130 )
-rotation = -0.530066
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 1.2
-
-[node name="ilha7" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 650, 130 )
-rotation = -0.750699
-script = ExtResource( 4 )
-MUS_POSITION = 1.8
-
-[node name="ilha8" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 830, 130 )
-rotation = 0.248573
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 2.4
-
-[node name="ilha9" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 950, 130 )
-rotation = 0.539571
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 2.8
-
-[node name="ilha10" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1100, 130 )
-rotation = 0.0312279
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 3.3
-
-[node name="ilha11" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1220, 130 )
-rotation = 0.502031
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 3.7
-
-[node name="ilha12" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1310, 130 )
-rotation = -0.705035
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 4
-
-[node name="ilha13" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1400, 130 )
-rotation = -0.716836
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 4.3
-
-[node name="ilha14" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1460, 130 )
-rotation = 0.378621
-script = ExtResource( 4 )
-MUS_POSITION = 4.5
-
-[node name="ilha15" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1490, 130 )
-rotation = -0.749907
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 4.6
-
-[node name="ilha16" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1610, 130 )
-rotation = 0.126059
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 5
-
-[node name="ilha17" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1670, 130 )
-rotation = -0.380196
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 5.2
-
-[node name="ilha18" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1730, 130 )
-rotation = -0.763424
-script = ExtResource( 4 )
-MUS_POSITION = 5.4
-
-[node name="ilha19" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1790, 130 )
-rotation = 0.675424
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 5.6
-
-[node name="ilha20" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1850, 130 )
-rotation = -0.665458
-script = ExtResource( 4 )
-MUS_POSITION = 5.8
-
-[node name="ilha21" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1880, 130 )
-rotation = -0.00240218
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 5.9
-
-[node name="ilha22" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 1970, 130 )
-rotation = 0.454786
-script = ExtResource( 4 )
-MUS_POSITION = 6.2
-
-[node name="ilha23" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2060, 130 )
-rotation = 0.585686
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 6.5
-
-[node name="ilha24" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2120, 130 )
-rotation = 0.0488649
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 6.7
-
-[node name="ilha25" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2150, 130 )
-rotation = -0.201722
-script = ExtResource( 4 )
-MUS_POSITION = 6.8
-
-[node name="ilha26" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2300, 130 )
-rotation = 0.159858
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 7.3
-
-[node name="ilha27" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2450, 130 )
-rotation = -0.119676
-script = ExtResource( 4 )
-MUS_POSITION = 7.8
-
-[node name="ilha28" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2570, 130 )
-rotation = -0.151475
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 8.2
-
-[node name="ilha29" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2690, 130 )
-rotation = 0.600758
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 8.6
-
-[node name="ilha30" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2780, 130 )
-rotation = 0.181047
-script = ExtResource( 4 )
-MUS_POSITION = 8.9
-
-[node name="ilha31" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2870, 130 )
-rotation = -0.732781
-script = ExtResource( 4 )
-MUS_POSITION = 9.2
-
-[node name="ilha32" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 2930, 130 )
-rotation = 0.570222
-script = ExtResource( 4 )
-MUS_POSITION = 9.4
-
-[node name="ilha33" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3020, 130 )
-rotation = 0.617339
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 9.7
-
-[node name="ilha34" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3080, 130 )
-rotation = 0.596203
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 9.9
-
-[node name="ilha35" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3140, 130 )
-rotation = -0.617571
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 10.1
-
-[node name="ilha36" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3200, 130 )
-rotation = -0.222477
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 10.3
-
-[node name="ilha37" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3290, 130 )
-rotation = -0.672614
-script = ExtResource( 4 )
-MUS_POSITION = 10.6
-
-[node name="ilha38" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3350, 130 )
-rotation = -0.633818
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 10.8
-
-[node name="ilha39" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3440, 130 )
-rotation = -0.524017
-script = ExtResource( 4 )
-MUS_POSITION = 11.1
-
-[node name="ilha40" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3500, 130 )
-rotation = -0.428774
-script = ExtResource( 4 )
-MUS_POSITION = 11.3
-
-[node name="ilha41" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3560, 130 )
-rotation = 0.152723
-script = ExtResource( 4 )
-MUS_POSITION = 11.5
-
-[node name="ilha42" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3590, 130 )
-rotation = -0.0352993
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 11.6
-
-[node name="ilha43" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3741.02, 130 )
-rotation = 0.499928
-script = ExtResource( 4 )
-MUS_POSITION = 12.1034
-
-[node name="ilha44" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3838.54, 130 )
-rotation = 0.124651
-script = ExtResource( 4 )
-MUS_POSITION = 12.4285
-
-[node name="ilha45" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3880.34, 130 )
-rotation = -0.783118
-script = ExtResource( 4 )
-MUS_POSITION = 12.5678
-
-[node name="ilha46" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 3922.14, 130 )
-rotation = -0.500909
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 12.7071
-
-[node name="ilha47" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4047.52, 130 )
-rotation = 0.574724
-script = ExtResource( 4 )
-MUS_POSITION = 13.1251
-
-[node name="ilha48" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4145.05, 130 )
-rotation = 0.637088
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 13.4502
-
-[node name="ilha49" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4193.81, 130 )
-rotation = -0.42242
-script = ExtResource( 4 )
-MUS_POSITION = 13.6127
-
-[node name="ilha50" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4235.61, 130 )
-rotation = -0.359647
-script = ExtResource( 4 )
-MUS_POSITION = 13.752
-
-[node name="ilha51" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4340.1, 130 )
-rotation = 0.525465
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 14.1003
-
-[node name="ilha52" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4388.86, 130 )
-rotation = 0.599839
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 14.2629
-
-[node name="ilha53" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4423.69, 130 )
-rotation = 0.68135
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 14.379
-
-[node name="ilha54" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4549.07, 130 )
-rotation = 0.117189
-script = ExtResource( 4 )
-MUS_POSITION = 14.7969
-
-[node name="ilha55" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4597.84, 130 )
-rotation = -0.644836
-script = ExtResource( 4 )
-MUS_POSITION = 14.9595
-
-[node name="ilha56" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4639.63, 130 )
-rotation = -0.599276
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 15.0988
-
-[node name="ilha57" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4688.39, 130 )
-rotation = 0.547738
-script = ExtResource( 4 )
-MUS_POSITION = 15.2613
-
-[node name="ilha58" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4778.95, 130 )
-rotation = 0.332167
-script = ExtResource( 4 )
-MUS_POSITION = 15.5632
-
-[node name="ilha59" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4883.44, 130 )
-rotation = 0.674321
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 15.9115
-
-[node name="ilha60" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 4960.07, 130 )
-rotation = 0.29462
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 16.1669
-
-[node name="ilha61" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5015.8, 130 )
-rotation = -0.597942
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 16.3527
-
-[node name="ilha62" type="Area2D" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 5240, 130 )
-rotation = 0.289886
+rotation = 0.538531
 script = ExtResource( 4 )
-tamanho_atual = 1
 MUS_POSITION = 17.1
 
-[node name="ilha63" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5300, 130 )
-rotation = -0.367596
+[node name="ilha2" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6380, 130 )
+rotation = -0.383898
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 17.3
+MUS_POSITION = 20.9
 
-[node name="ilha64" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5360, 130 )
-rotation = 0.482545
+[node name="ilha3" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6440, 130 )
+rotation = -0.471284
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 17.5
+MUS_POSITION = 21.1
 
-[node name="ilha65" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5480, 130 )
-rotation = 0.369801
+[node name="ilha4" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6470, 130 )
+rotation = -0.548103
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 17.9
+MUS_POSITION = 21.2
 
-[node name="ilha66" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5570, 130 )
-rotation = 0.607239
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 18.2
-
-[node name="ilha67" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5630, 130 )
-rotation = 0.253826
-script = ExtResource( 4 )
-MUS_POSITION = 18.4
-
-[node name="ilha68" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5660, 130 )
-rotation = -0.249491
-script = ExtResource( 4 )
-MUS_POSITION = 18.5
-
-[node name="ilha69" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5780, 130 )
-rotation = -0.75964
-script = ExtResource( 4 )
-MUS_POSITION = 18.9
-
-[node name="ilha70" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5810, 130 )
-rotation = -0.0412258
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 19
-
-[node name="ilha71" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5840, 130 )
-rotation = -0.516601
-script = ExtResource( 4 )
-MUS_POSITION = 19.1
-
-[node name="ilha72" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 5990, 130 )
-rotation = 0.760952
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 19.6
-
-[node name="ilha73" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6110, 130 )
-rotation = -0.485184
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 20
-
-[node name="ilha74" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6260, 130 )
-rotation = 0.387964
-script = ExtResource( 4 )
-MUS_POSITION = 20.5
-
-[node name="ilha75" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6710, 130 )
-rotation = -0.438659
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 22
-
-[node name="ilha76" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6740, 130 )
-rotation = -0.144079
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 22.1
-
-[node name="ilha77" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6800, 130 )
-rotation = 0.202019
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 22.3
-
-[node name="ilha78" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 6920, 130 )
-rotation = 0.746853
-script = ExtResource( 4 )
-MUS_POSITION = 22.7
-
-[node name="ilha79" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7040, 130 )
-rotation = 0.716171
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 23.1
-
-[node name="ilha80" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7070, 130 )
-rotation = -0.267107
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 23.2
-
-[node name="ilha81" type="Area2D" parent="level" instance=ExtResource( 3 )]
+[node name="ilha5" type="Area2D" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 7100, 130 )
-rotation = -0.672807
+rotation = -0.0248741
 script = ExtResource( 4 )
-tamanho_atual = 1
 MUS_POSITION = 23.3
 
-[node name="ilha82" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7220, 130 )
-rotation = -0.03059
+[node name="ilha6" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 7370, 130 )
+rotation = 0.366601
 script = ExtResource( 4 )
-MUS_POSITION = 23.7
+MUS_POSITION = 24.2
 
-[node name="ilha83" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7280, 130 )
-rotation = -0.0238661
+[node name="ilha7" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 7640, 130 )
+rotation = -0.102109
 script = ExtResource( 4 )
-MUS_POSITION = 23.9
+MUS_POSITION = 25.1
 
-[node name="ilha84" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7310, 130 )
-rotation = -0.547978
+[node name="ilha8" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 7670, 130 )
+rotation = -0.318582
 script = ExtResource( 4 )
-MUS_POSITION = 24
+MUS_POSITION = 25.2
 
-[node name="ilha85" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7430, 130 )
-rotation = -0.00228966
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 24.4
-
-[node name="ilha86" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7460, 130 )
-rotation = 0.556523
-script = ExtResource( 4 )
-MUS_POSITION = 24.5
-
-[node name="ilha87" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7610, 130 )
-rotation = -0.142035
-script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 25
-
-[node name="ilha88" type="Area2D" parent="level" instance=ExtResource( 3 )]
+[node name="ilha9" type="Area2D" parent="level" instance=ExtResource( 3 )]
 position = Vector2( 7760, 130 )
-rotation = -0.0108398
+rotation = 0.622967
 script = ExtResource( 4 )
-tamanho_atual = 1
 MUS_POSITION = 25.5
 
-[node name="ilha89" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7820, 130 )
-rotation = -0.581562
+[node name="ilha10" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 7910, 130 )
+rotation = -0.742442
 script = ExtResource( 4 )
-MUS_POSITION = 25.7
+MUS_POSITION = 26.0
+
+[node name="ilha11" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 8810, 130 )
+rotation = -0.262785
+script = ExtResource( 4 )
+MUS_POSITION = 29.0
+
+[node name="ilha12" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 8870, 130 )
+rotation = -0.376733
+script = ExtResource( 4 )
+MUS_POSITION = 29.2
+
+[node name="ilha13" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 9830, 130 )
+rotation = -0.376562
+script = ExtResource( 4 )
+MUS_POSITION = 32.4
+
+[node name="ilha14" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 9950, 130 )
+rotation = -0.0517078
+script = ExtResource( 4 )
+MUS_POSITION = 32.8
+
+[node name="ilha15" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 10190, 130 )
+rotation = 0.610207
+script = ExtResource( 4 )
+MUS_POSITION = 33.6
+
+[node name="ilha16" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 10370, 130 )
+rotation = -0.468947
+script = ExtResource( 4 )
+MUS_POSITION = 34.2
+
+[node name="ilha17" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 10430, 130 )
+rotation = -0.673547
+script = ExtResource( 4 )
+MUS_POSITION = 34.4
+
+[node name="ilha18" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 10700, 130 )
+rotation = -0.674385
+script = ExtResource( 4 )
+MUS_POSITION = 35.3
+
+[node name="ilha19" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 10850, 130 )
+rotation = 0.0549172
+script = ExtResource( 4 )
+MUS_POSITION = 35.8
+
+[node name="ilha20" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11090, 130 )
+rotation = -0.086212
+script = ExtResource( 4 )
+MUS_POSITION = 36.6
+
+[node name="ilha21" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11180, 130 )
+rotation = -0.699705
+script = ExtResource( 4 )
+MUS_POSITION = 36.9
+
+[node name="ilha22" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11240, 130 )
+rotation = 0.100717
+script = ExtResource( 4 )
+MUS_POSITION = 37.1
+
+[node name="ilha23" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11330, 130 )
+rotation = 0.035983
+script = ExtResource( 4 )
+MUS_POSITION = 37.4
+
+[node name="ilha24" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11600, 130 )
+rotation = 0.186991
+script = ExtResource( 4 )
+MUS_POSITION = 38.3
+
+[node name="ilha25" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11660, 130 )
+rotation = -0.226299
+script = ExtResource( 4 )
+MUS_POSITION = 38.5
+
+[node name="ilha26" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11750, 130 )
+rotation = -0.392261
+script = ExtResource( 4 )
+MUS_POSITION = 38.8
+
+[node name="ilha27" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 11990, 130 )
+rotation = 0.677374
+script = ExtResource( 4 )
+MUS_POSITION = 39.6
+
+[node name="ilha28" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 12080, 130 )
+rotation = 0.592039
+script = ExtResource( 4 )
+MUS_POSITION = 39.9
+
+[node name="ilha29" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 12170, 130 )
+rotation = 0.634939
+script = ExtResource( 4 )
+MUS_POSITION = 40.2
+
+[node name="ilha30" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 12260, 130 )
+rotation = -0.0345654
+script = ExtResource( 4 )
+MUS_POSITION = 40.5
+
+[node name="ilha31" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 12560, 130 )
+rotation = 0.343563
+script = ExtResource( 4 )
+MUS_POSITION = 41.5
+
+[node name="ilha32" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 12710, 130 )
+rotation = 0.731749
+script = ExtResource( 4 )
+MUS_POSITION = 42.0
+
+[node name="ilha33" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 13340, 130 )
+rotation = -0.177366
+script = ExtResource( 4 )
+MUS_POSITION = 44.1
+
+[node name="ilha34" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 13520, 130 )
+rotation = -0.205946
+script = ExtResource( 4 )
+MUS_POSITION = 44.7
+
+[node name="ilha35" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 13670, 130 )
+rotation = 0.464829
+script = ExtResource( 4 )
+MUS_POSITION = 45.2
+
+[node name="ilha36" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 13880, 130 )
+rotation = 0.492779
+script = ExtResource( 4 )
+MUS_POSITION = 45.9
+
+[node name="ilha37" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 13940, 130 )
+rotation = 0.713736
+script = ExtResource( 4 )
+MUS_POSITION = 46.1
+
+[node name="ilha38" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14000, 130 )
+rotation = 0.266869
+script = ExtResource( 4 )
+MUS_POSITION = 46.3
+
+[node name="ilha39" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14090, 130 )
+rotation = 0.173698
+script = ExtResource( 4 )
+MUS_POSITION = 46.6
+
+[node name="ilha40" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14330, 130 )
+rotation = 0.0511503
+script = ExtResource( 4 )
+MUS_POSITION = 47.4
+
+[node name="ilha41" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14480, 130 )
+rotation = 0.0393041
+script = ExtResource( 4 )
+MUS_POSITION = 47.9
+
+[node name="ilha42" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14720, 130 )
+rotation = 0.574141
+script = ExtResource( 4 )
+MUS_POSITION = 48.7
+
+[node name="ilha43" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14780, 130 )
+rotation = 0.198513
+script = ExtResource( 4 )
+MUS_POSITION = 48.9
+
+[node name="ilha44" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14870, 130 )
+rotation = -0.676506
+script = ExtResource( 4 )
+MUS_POSITION = 49.2
+
+[node name="ilha45" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 14960, 130 )
+rotation = -0.346051
+script = ExtResource( 4 )
+MUS_POSITION = 49.5
+
+[node name="ilha46" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 15230, 130 )
+rotation = 0.533929
+script = ExtResource( 4 )
+MUS_POSITION = 50.4
+
+[node name="ilha47" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 15470, 130 )
+rotation = -0.303956
+script = ExtResource( 4 )
+MUS_POSITION = 51.2
+
+[node name="ilha48" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 15710, 130 )
+rotation = 0.761233
+script = ExtResource( 4 )
+MUS_POSITION = 52.0
+
+[node name="ilha49" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 16040, 130 )
+rotation = -0.136385
+script = ExtResource( 4 )
+MUS_POSITION = 53.1
+
+[node name="ilha50" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 16160, 130 )
+rotation = 0.502261
+script = ExtResource( 4 )
+MUS_POSITION = 53.5
+
+[node name="ilha51" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 16670, 130 )
+rotation = 0.598229
+script = ExtResource( 4 )
+MUS_POSITION = 55.2
+
+[node name="ilha52" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 16760, 130 )
+rotation = -0.42978
+script = ExtResource( 4 )
+MUS_POSITION = 55.5
+
+[node name="ilha53" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 16880, 130 )
+rotation = -0.581354
+script = ExtResource( 4 )
+MUS_POSITION = 55.9
+
+[node name="ilha54" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 17330, 130 )
+rotation = 0.147959
+script = ExtResource( 4 )
+MUS_POSITION = 57.4
+
+[node name="ilha55" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 17420, 130 )
+rotation = -0.46081
+script = ExtResource( 4 )
+MUS_POSITION = 57.7
+
+[node name="ilha56" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 17540, 130 )
+rotation = -0.590958
+script = ExtResource( 4 )
+MUS_POSITION = 58.1
+
+[node name="ilha57" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 17990, 130 )
+rotation = -0.320302
+script = ExtResource( 4 )
+MUS_POSITION = 59.6
+
+[node name="ilha58" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 18080, 130 )
+rotation = -0.00494634
+script = ExtResource( 4 )
+MUS_POSITION = 59.9
+
+[node name="ilha59" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 18200, 130 )
+rotation = 0.464715
+script = ExtResource( 4 )
+MUS_POSITION = 60.3
+
+[node name="ilha60" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 18410, 130 )
+rotation = 0.661103
+script = ExtResource( 4 )
+MUS_POSITION = 61
+
+[node name="ilha61" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 18500, 130 )
+rotation = 0.184334
+script = ExtResource( 4 )
+MUS_POSITION = 61.3
+
+[node name="ilha62" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 18830, 130 )
+rotation = 0.344273
+script = ExtResource( 4 )
+MUS_POSITION = 62.4
+
+[node name="ilha63" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 1820, 130 )
+rotation = -0.549801
+script = ExtResource( 4 )
+MUS_POSITION = 17.1
+
+[node name="ilha64" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2200, 130 )
+rotation = -0.462358
+script = ExtResource( 4 )
+MUS_POSITION = 20.9
+
+[node name="ilha65" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2220, 130 )
+rotation = 0.287556
+script = ExtResource( 4 )
+MUS_POSITION = 21.1
+
+[node name="ilha66" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2230, 130 )
+rotation = 0.469481
+script = ExtResource( 4 )
+MUS_POSITION = 21.2
+
+[node name="ilha67" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2440, 130 )
+rotation = 0.735263
+script = ExtResource( 4 )
+MUS_POSITION = 23.3
+
+[node name="ilha68" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2530, 130 )
+rotation = 0.580151
+script = ExtResource( 4 )
+MUS_POSITION = 24.2
+
+[node name="ilha69" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2620, 130 )
+rotation = -0.107744
+script = ExtResource( 4 )
+MUS_POSITION = 25.1
+
+[node name="ilha70" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2630, 130 )
+rotation = 0.768026
+script = ExtResource( 4 )
+MUS_POSITION = 25.2
+
+[node name="ilha71" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2660, 130 )
+rotation = 0.188852
+script = ExtResource( 4 )
+MUS_POSITION = 25.5
+
+[node name="ilha72" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 2710, 130 )
+rotation = 0.101104
+script = ExtResource( 4 )
+MUS_POSITION = 26.0
+
+[node name="ilha73" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3010, 130 )
+rotation = -0.658984
+script = ExtResource( 4 )
+MUS_POSITION = 29.0
+
+[node name="ilha74" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3030, 130 )
+rotation = 0.546204
+script = ExtResource( 4 )
+MUS_POSITION = 29.2
+
+[node name="ilha75" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3350, 130 )
+rotation = -0.133474
+script = ExtResource( 4 )
+MUS_POSITION = 32.4
+
+[node name="ilha76" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3390, 130 )
+rotation = -0.305672
+script = ExtResource( 4 )
+MUS_POSITION = 32.8
+
+[node name="ilha77" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3470, 130 )
+rotation = -0.383049
+script = ExtResource( 4 )
+MUS_POSITION = 33.6
+
+[node name="ilha78" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3530, 130 )
+rotation = 0.595062
+script = ExtResource( 4 )
+MUS_POSITION = 34.2
+
+[node name="ilha79" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3550, 130 )
+rotation = 0.262322
+script = ExtResource( 4 )
+MUS_POSITION = 34.4
+
+[node name="ilha80" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3640, 130 )
+rotation = 0.480465
+script = ExtResource( 4 )
+MUS_POSITION = 35.3
+
+[node name="ilha81" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3690, 130 )
+rotation = 0.34597
+script = ExtResource( 4 )
+MUS_POSITION = 35.8
+
+[node name="ilha82" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3770, 130 )
+rotation = 0.419694
+script = ExtResource( 4 )
+MUS_POSITION = 36.6
+
+[node name="ilha83" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3800, 130 )
+rotation = 0.752932
+script = ExtResource( 4 )
+MUS_POSITION = 36.9
+
+[node name="ilha84" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3820, 130 )
+rotation = -0.149469
+script = ExtResource( 4 )
+MUS_POSITION = 37.1
+
+[node name="ilha85" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3850, 130 )
+rotation = 0.363591
+script = ExtResource( 4 )
+MUS_POSITION = 37.4
+
+[node name="ilha86" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3940, 130 )
+rotation = 0.599774
+script = ExtResource( 4 )
+MUS_POSITION = 38.3
+
+[node name="ilha87" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3960, 130 )
+rotation = 0.127253
+script = ExtResource( 4 )
+MUS_POSITION = 38.5
+
+[node name="ilha88" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 3990, 130 )
+rotation = -0.750193
+script = ExtResource( 4 )
+MUS_POSITION = 38.8
+
+[node name="ilha89" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 4070, 130 )
+rotation = 0.198582
+script = ExtResource( 4 )
+MUS_POSITION = 39.6
 
 [node name="ilha90" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 7880, 130 )
-rotation = -0.21561
+position = Vector2( 4100, 130 )
+rotation = -0.361008
 script = ExtResource( 4 )
-MUS_POSITION = 25.9
+MUS_POSITION = 39.9
 
 [node name="ilha91" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8150, 130 )
-rotation = 0.718649
+position = Vector2( 4130, 130 )
+rotation = -0.691243
 script = ExtResource( 4 )
-MUS_POSITION = 26.8
+MUS_POSITION = 40.2
 
 [node name="ilha92" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8210, 130 )
-rotation = -0.185925
+position = Vector2( 4160, 130 )
+rotation = -0.643907
 script = ExtResource( 4 )
-MUS_POSITION = 27
+MUS_POSITION = 40.5
 
 [node name="ilha93" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8240, 130 )
-rotation = 0.0806684
+position = Vector2( 4260, 130 )
+rotation = -0.455908
 script = ExtResource( 4 )
-MUS_POSITION = 27.1
+MUS_POSITION = 41.5
 
 [node name="ilha94" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8360, 130 )
-rotation = -0.126535
+position = Vector2( 4310, 130 )
+rotation = 0.0524318
 script = ExtResource( 4 )
-MUS_POSITION = 27.5
+MUS_POSITION = 42.0
 
 [node name="ilha95" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8450, 130 )
-rotation = 0.357526
+position = Vector2( 4520, 130 )
+rotation = 0.691577
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 27.8
+MUS_POSITION = 44.1
 
 [node name="ilha96" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8510, 130 )
-rotation = 0.233472
+position = Vector2( 4580, 130 )
+rotation = -0.559854
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 28
+MUS_POSITION = 44.7
 
 [node name="ilha97" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8540, 130 )
-rotation = -0.563521
+position = Vector2( 4630, 130 )
+rotation = -0.475169
 script = ExtResource( 4 )
-MUS_POSITION = 28.1
+MUS_POSITION = 45.2
 
 [node name="ilha98" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8660, 130 )
-rotation = -0.518285
+position = Vector2( 4700, 130 )
+rotation = -0.565896
 script = ExtResource( 4 )
-MUS_POSITION = 28.5
+MUS_POSITION = 45.9
 
 [node name="ilha99" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8720, 130 )
-rotation = -0.147813
+position = Vector2( 4720, 130 )
+rotation = -0.158906
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 28.7
+MUS_POSITION = 46.1
 
 [node name="ilha100" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8840, 130 )
-rotation = -0.282178
+position = Vector2( 4740, 130 )
+rotation = -0.197418
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 29.1
+MUS_POSITION = 46.3
 
 [node name="ilha101" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 8990, 130 )
-rotation = 0.146655
+position = Vector2( 4770, 130 )
+rotation = -0.599907
 script = ExtResource( 4 )
-MUS_POSITION = 29.6
+MUS_POSITION = 46.6
 
 [node name="ilha102" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9110, 130 )
-rotation = -0.101205
+position = Vector2( 4850, 130 )
+rotation = 0.0566613
 script = ExtResource( 4 )
-MUS_POSITION = 30
+MUS_POSITION = 47.4
 
 [node name="ilha103" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9620, 130 )
-rotation = -0.37383
+position = Vector2( 4900, 130 )
+rotation = 0.0390332
 script = ExtResource( 4 )
-MUS_POSITION = 31.7
+MUS_POSITION = 47.9
 
 [node name="ilha104" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9740, 130 )
-rotation = -0.246972
+position = Vector2( 4980, 130 )
+rotation = -0.399478
 script = ExtResource( 4 )
-MUS_POSITION = 32.1
+MUS_POSITION = 48.7
 
 [node name="ilha105" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9770, 130 )
-rotation = -0.0272377
+position = Vector2( 5000, 130 )
+rotation = 0.696084
 script = ExtResource( 4 )
-MUS_POSITION = 32.2
+MUS_POSITION = 48.9
 
 [node name="ilha106" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9860, 130 )
-rotation = 0.207599
+position = Vector2( 5030, 130 )
+rotation = 0.209327
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 32.5
+MUS_POSITION = 49.2
 
 [node name="ilha107" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9860, 130 )
-rotation = 0.576536
+position = Vector2( 5060, 130 )
+rotation = 0.696509
 script = ExtResource( 4 )
-MUS_POSITION = 32.5
+MUS_POSITION = 49.5
 
 [node name="ilha108" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9860, 130 )
-rotation = 0.600546
+position = Vector2( 5150, 130 )
+rotation = 0.303583
 script = ExtResource( 4 )
-MUS_POSITION = 32.5
+MUS_POSITION = 50.4
 
 [node name="ilha109" type="Area2D" parent="level" instance=ExtResource( 3 )]
-position = Vector2( 9860, 130 )
-rotation = 0.236428
+position = Vector2( 5230, 130 )
+rotation = 0.167332
 script = ExtResource( 4 )
-tamanho_atual = 1
-MUS_POSITION = 32.5
+MUS_POSITION = 51.2
+
+[node name="ilha110" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5310, 130 )
+rotation = 0.0681259
+script = ExtResource( 4 )
+MUS_POSITION = 52.0
+
+[node name="ilha111" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5420, 130 )
+rotation = 0.22529
+script = ExtResource( 4 )
+MUS_POSITION = 53.1
+
+[node name="ilha112" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5460, 130 )
+rotation = 0.751457
+script = ExtResource( 4 )
+MUS_POSITION = 53.5
+
+[node name="ilha113" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5630, 130 )
+rotation = 0.170075
+script = ExtResource( 4 )
+MUS_POSITION = 55.2
+
+[node name="ilha114" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5660, 130 )
+rotation = -0.524744
+script = ExtResource( 4 )
+MUS_POSITION = 55.5
+
+[node name="ilha115" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5700, 130 )
+rotation = 0.683376
+script = ExtResource( 4 )
+MUS_POSITION = 55.9
+
+[node name="ilha116" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5850, 130 )
+rotation = 0.451226
+script = ExtResource( 4 )
+MUS_POSITION = 57.4
+
+[node name="ilha117" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5880, 130 )
+rotation = -0.486655
+script = ExtResource( 4 )
+MUS_POSITION = 57.7
+
+[node name="ilha118" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 5920, 130 )
+rotation = -0.486056
+script = ExtResource( 4 )
+MUS_POSITION = 58.1
+
+[node name="ilha119" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6070, 130 )
+rotation = 0.364156
+script = ExtResource( 4 )
+MUS_POSITION = 59.6
+
+[node name="ilha120" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6100, 130 )
+rotation = -0.607599
+script = ExtResource( 4 )
+MUS_POSITION = 59.9
+
+[node name="ilha121" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6140, 130 )
+rotation = 0.460849
+script = ExtResource( 4 )
+MUS_POSITION = 60.3
+
+[node name="ilha122" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6210, 130 )
+rotation = 0.406328
+script = ExtResource( 4 )
+MUS_POSITION = 61
+
+[node name="ilha123" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6240, 130 )
+rotation = 0.14933
+script = ExtResource( 4 )
+MUS_POSITION = 61.3
+
+[node name="ilha124" type="Area2D" parent="level" instance=ExtResource( 3 )]
+position = Vector2( 6350, 130 )
+rotation = 0.754919
+script = ExtResource( 4 )
+MUS_POSITION = 62.4
 
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 36, 149 )
@@ -766,8 +798,7 @@ position = Vector2( 36, 149 )
 [node name="Sprite" type="AnimatedSprite" parent="player"]
 position = Vector2( 0, 13 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 4 )
-frame = 1
+frames = SubResource( 2 )
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -781,7 +812,7 @@ drag_margin_v_enabled = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 0, 13 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="song" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )

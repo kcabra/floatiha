@@ -4,7 +4,7 @@ onready var player = $player
 onready var level = $level
 onready var song = $song
 
-const SPEED = 300
+const SPEED = 100
 const JUMP = 500
 const GRAV = 5
 const OFFSET = 110 # 140
@@ -30,7 +30,5 @@ func _process(delta):
 	move_vel.x = SPEED
 	move_vel = player.move_and_slide(move_vel)
 	if ilhas.size() > 0:
-#		for ilha in 
-		pass
-	if song.get_playback_position() > ilhas[0]["MUS_POSITION"]:
-		ilhas.pop_front().raise()
+		if song.get_playback_position() > ilhas[0]["MUS_POSITION"]:
+			ilhas.pop_front().raise()

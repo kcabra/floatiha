@@ -11,5 +11,5 @@ dest_files=[ "res://.import/floatiha2.ogg-758d41850f688ef68d95fb21dffd04e5.oggst
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

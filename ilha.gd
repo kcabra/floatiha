@@ -4,10 +4,10 @@ extends Area2D
 onready var tween = $Tween
 onready var sprite = $Sprite
 
-enum cores {verde, amarelo, cristal}
-var tipo_atual = cores.verde
+enum cores {verde, cristal}
+export (cores) var tipo_atual = cores.verde
 enum tamanhos {pequena, grande}
-var tamanho_atual
+export (tamanhos) var tamanho_atual
 
 export (float, 0, 2, 0.1) var DURATION = 0.2
 export (float, 0, 300, 0.1) var MUS_POSITION
@@ -20,6 +20,8 @@ func _ready():
 	match tipo_atual:
 		cores.verde:
 			cor = "verde"
+		cores.cristal:
+			cor = "cristal"
 	match tamanho_atual:
 		tamanhos.grande:
 			tamanho = "grande"

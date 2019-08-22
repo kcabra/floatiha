@@ -8,8 +8,7 @@ func _run():
 	print("running script")
 	game = get_scene()
 	level = game.get_node("level")
-	del_all_islands()
-	gen_ilhas_w_size()
+	gen_ilhas()
 
 func get_island_sizes():
 	var sizes = Array()
@@ -38,12 +37,13 @@ func gen_ilhas_w_size():
 
 func gen_ilhas():
 	var ilha_scene: PackedScene = load("res://ilha.tscn")
-	var ilha_array = [17.1, 20.9, 21.1, 21.2, 23.3, 24.2, 25.1, 25.2, 25.5, 26.0, 29.0, 29.2, 32.4, 32.8, 33.6, 34.2, 34.4, 35.3, 35.8, 36.6, 36.9, 37.1, 37.4, 38.3, 38.5, 38.8, 39.6, 39.9, 40.2, 40.5, 41.5, 42.0, 44.1, 44.7, 45.2, 45.9, 46.1, 46.3, 46.6, 47.4, 47.9, 48.7, 48.9, 49.2, 49.5, 50.4, 51.2, 52.0, 53.1, 53.5, 55.2, 55.5, 55.9, 57.4, 57.7, 58.1, 59.6, 59.9, 60.3, 61, 61.3, 62.4]
+	var ilha_array = [35.4, 35.9, 42.7, 43.2, 43.7, 44.2, 47.5, 47.9, 50.9, 56.3, 56.6, 57.0, 58.5, 58.8, 59.2, 62.4, 62.7, 63, 63.3, 64.4]
 	randomize()
 	for pos in ilha_array:
 		var ilha = ilha_scene.instance()
 		ilha.position.x = pos * game.SPEED + game.OFFSET
 		ilha.MUS_POSITION = pos
+		ilha.tipo_atual = 1
 		ilha.tamanho_atual = randi() % 2
 		level.add_child(ilha)
 		ilha.set_owner(game)

@@ -37,20 +37,21 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 50 )
 
-[node name="ilha" type="Area2D"]
+[node name="ilha" type="Area2D" groups=[
+"ilhas",
+]]
 position = Vector2( 0, 130 )
+rotation = 0.459624
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="." groups=[
-"ilhas",
-]]
+[node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 60 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
-animation = "cristal-grande"
+animation = "verde-pequena"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

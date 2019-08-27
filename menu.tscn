@@ -7,7 +7,7 @@
 [ext_resource path="res://player/ppstand.png" type="Texture" id=5]
 [ext_resource path="res://player/stand1.png" type="Texture" id=6]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
 onready var tween = $tweener
@@ -24,7 +24,7 @@ func _process(_delta):
 		yield(tween, \"tween_completed\")
 		get_tree().change_scene(\"res://game.tscn\")"
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
@@ -33,7 +33,7 @@ animations = [ {
 } ]
 
 [node name="menu" type="Node2D"]
-script = SubResource( 2 )
+script = SubResource( 1 )
 
 [node name="ceu" type="Sprite" parent="."]
 scale = Vector2( 1.818, 1.818 )
@@ -60,8 +60,7 @@ texture = ExtResource( 4 )
 [node name="player" type="AnimatedSprite" parent="."]
 position = Vector2( 39, 160 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 1 )
-frame = 1
+frames = SubResource( 2 )
 playing = true
 
 [node name="tweener" type="Tween" parent="."]

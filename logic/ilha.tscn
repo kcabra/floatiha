@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://logic/ilha.gd" type="Script" id=1]
+[ext_resource path="res://assets/ilhas/verde1.png" type="Texture" id=2]
+
+
+[node name="ilha" type="Node2D"]
+editor/display_folded = true
+position = Vector2( 500, 260 )
+rotation = 0.541052
+script = ExtResource( 1 )
+MUS_POS = 3.0
+height = 113
+init_y = -10.0
+init_rot = 31.0
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2.727, 2.727 )
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]

@@ -2,7 +2,7 @@ tool
 extends Node2D
 
 var SPEED = 100
-var OFFSET = 200
+var OFFSET = 140
 var GROUND = 270
 
 export (float, 0, 70, 0.1) var MUS_POS = 0.0 setget _update_pos
@@ -16,6 +16,10 @@ export (float, -45, 45, 0.5) var init_rot = 24
 func _update_pos (value):
 	MUS_POS = value
 	self.position.x = (SPEED * MUS_POS) + OFFSET
+
+func _ready():
+	position.y = GROUND + init_y
+	rotation_degrees = init_rot
 
 func _process(_delta):
 	if Engine.editor_hint:

@@ -63,11 +63,14 @@ func _physics_process(_delta):
 		jump_timer_ground = 0
 	if Input.is_action_just_pressed("move_up"):
 		jump_timer_button = 0
+	
 	if ( jump_timer_button < JUMP_TOLERANCE and
 			jump_timer_ground < JUMP_TOLERANCE ):
 		move_vec.y = -500
 		jump_timer_ground = JUMP_TOLERANCE
 		jump_timer_button = JUMP_TOLERANCE
+	elif ( Input.is_action_just_released("move_up") and move_vec.y < 0 ):
+		move_vec.y /= 4
 	elif ( not grounded and move_vec.y < 500 ):
 			move_vec.y += 20
 	

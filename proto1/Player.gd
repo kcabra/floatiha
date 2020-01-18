@@ -1,32 +1,50 @@
 extends KinematicBody2D
 
+signal item_changed
+var current_item = null
+
+func use_item(item_name):
+	if current_item and current_item["name"] == item_name:
+		current_item = null
+		emit_signal("item_changed", null)
+		return true
+	else:
+		return false
+
+func got_item(item):
+	emit_signal("item_changed", item)
+	current_item = item
+
 signal interacted
 
 func _process(delta):
 	## INTERACTION
 	# first get subarray of interactables which are overlaping player Area2D
-	# then, if any, get the closest one and call interact on it. this system
-	# assumes that all node in the "interactable" group are Area2Ds with
-	# some implementation of a method "interact", which must return true if
-	# the player was able to successfully interact with it.
+	# then, if any, get the closest one and check it's requirements. if the
+	# requirements are met, or if there aren't any, call interact on it.
+	# this system assumes that all node in the "interactable" group are Area2Ds
+	# with some implementation of a method "interact", which must return true
+	# if the player was able to successfully interact with it.
 	if Input.is_action_just_pressed("move_down"):
-		var all_nodes = get_tree().get_nodes_in_group("interactable")
-		var nearby_nodes = Array()
-		for node in all_nodes:
-			if node.overlaps_area($Area2D):
-				nearby_nodes.append(node)
+		var nearby_nodes = $Area2D.get_overlapping_areas()
 		var selected
 		if nearby_nodes.size() == 1:
 			selected = nearby_nodes[0]
 		elif nearby_nodes.size() >= 1:
 			for node in nearby_nodes:
-				if not selected:
+				if (not selected) or ( node.position.distance_to(self.position)
+						< selected.position.distance_to(self.position) ):
 					selected = node
-				elif ( node.position.distance_to(self.position) <
-					 selected.position.distance_to(self.position) ):
-					selected = node
-		if selected and selected.interacted():
-			emit_signal("interacted")
+		if selected:
+			if selected.get("requires") and (not use_item(selected.requires)):
+					$Speech.say("I should give this spirit a "
+							+selected.requires+"...")
+			else:
+				var ret = selected.interacted()
+				if ret:
+					emit_signal("interacted")
+				if ret is Dictionary:
+					got_item(ret)
 
 var move_vec = Vector2.ZERO
 var speed = 300
